@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Terms of Service - Aetheris</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --color-primary: #0f766e;
+      --color-accent: #d4af37;
+      --color-bg: #f8fafc;
+      --color-card: #ffffff;
+      --color-text: #0f172a;
+      --space-1: .25rem;
+      --space-2: .5rem;
+      --space-3: .75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --radius: 16px;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, .06);
+      --shadow: 0 6px 24px rgba(0, 0, 0, .08);
+      --shadow-lg: 0 16px 40px rgba(0, 0, 0, .12);
+      --ring: 0 0 0 3px rgba(15, 118, 110, .2);
+      --container: 1200px;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html, body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      padding-top: 80px;
+      font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin-inline: auto;
+      padding-inline: var(--space-4);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: var(--color-card);
+      border-bottom: 1px solid rgba(15, 23, 42, .08);
+      box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-block: var(--space-4);
+      gap: var(--space-4);
+      min-height: 80px;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: .2px;
+      text-decoration: none;
+      color: var(--color-text);
+    }
+
+    .nav {
+      display: flex;
+      gap: var(--space-6);
+      align-items: center;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: rgba(15, 23, 42, .85);
+      font-weight: 500;
+    }
+
+    .nav a:hover {
+      color: var(--color-primary)
+    }
+
+    .main-content {
+      padding-block: var(--space-12);
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: var(--space-10);
+    }
+
+    .page-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 0 0 var(--space-3);
+    }
+
+    .page-subtitle {
+      color: rgba(15, 23, 42, .72);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
+    .terms-content {
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    .terms-section {
+      background: var(--color-card);
+      border: 1px solid rgba(15, 23, 42, .08);
+      border-radius: var(--radius);
+      padding: var(--space-6);
+      margin-bottom: var(--space-6);
+    }
+
+    .terms-section h3 {
+      color: var(--color-primary);
+      margin: 0 0 var(--space-4);
+      font-size: 1.25rem;
+    }
+
+    .terms-section p {
+      color: rgba(15, 23, 42, .75);
+      margin: 0 0 var(--space-3);
+      line-height: 1.6;
+    }
+
+    .terms-section ul {
+      margin: 0 0 var(--space-3);
+      padding-left: var(--space-5);
+    }
+
+    .terms-section li {
+      margin-bottom: var(--space-2);
+      color: rgba(15, 23, 42, .75);
+    }
+
+    .last-updated {
+      text-align: center;
+      color: rgba(15, 23, 42, .6);
+      font-size: 0.9rem;
+      margin-bottom: var(--space-8);
+    }
+
+    @media (max-width: 780px) {
+      .nav {
+        display: none;
+      }
+      
+      .container {
+        padding-inline: var(--space-3);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Aetheris</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title">Terms of Service</h1>
+        <p class="page-subtitle">Please read these terms carefully before using our website and services.</p>
+      </div>
+
+      <div class="last-updated">
+        Last updated: December 2024
+      </div>
+
+      <div class="terms-content">
+        <div class="terms-section">
+          <h3>1. Acceptance of Terms</h3>
+          <p>By accessing and using the Aetheris website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+        </div>
+
+        <div class="terms-section">
+          <h3>2. Use License</h3>
+          <p>Permission is granted to temporarily download one copy of the materials on Aetheris's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+          <ul>
+            <li>Modify or copy the materials</li>
+            <li>Use the materials for any commercial purpose or for any public display</li>
+            <li>Attempt to reverse engineer any software contained on the website</li>
+            <li>Remove any copyright or other proprietary notations from the materials</li>
+          </ul>
+        </div>
+
+        <div class="terms-section">
+          <h3>3. Product Information</h3>
+          <p>We strive to provide accurate product descriptions, images, and pricing information. However, we do not warrant that product descriptions or other content is accurate, complete, reliable, current, or error-free. If a product offered by us is not as described, your sole remedy is to return it in unused condition.</p>
+        </div>
+
+        <div class="terms-section">
+          <h3>4. Pricing and Payment</h3>
+          <p>All prices are subject to change without notice. We reserve the right to modify or discontinue any product or service without notice. Payment must be received before order processing and shipment. We accept major credit cards and PayPal.</p>
+        </div>
+
+        <div class="terms-section">
+          <h3>5. Shipping and Delivery</h3>
+          <p>Shipping times are estimates and not guaranteed. We are not responsible for delays caused by shipping carriers or customs. Risk of loss and title for products purchased pass to you upon delivery to the carrier.</p>
+        </div>
+
+        <div class="terms-section">
+          <h3>6. Returns and Refunds</h3>
+          <p>Our return policy is detailed in our Returns page. Returns must be made within 30 days of purchase and products must be in original, unopened condition. Refunds will be processed to the original payment method within 5-7 business days.</p>
+        </div>
+
+        <div class="terms-section">
+          <h3>7. Privacy Policy</h3>
+          <p>Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the website, to understand our practices.</p>
+        </div>
+
+        <div class="terms-section">
+          <h3>8. Prohibited Uses</h3>
+          <p>You may not use our website:</p>
+          <ul>
+            <li>For any unlawful purpose or to solicit others to perform unlawful acts</li>
+            <li>To violate any international, federal, provincial, or state regulations, rules, laws, or local ordinances</li>
+            <li>To infringe upon or violate our intellectual property rights or the intellectual property rights of others</li>
+            <li>To harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate</li>
+            <li>To submit false or misleading information</li>
+          </ul>
+        </div>
+
+        <div class="terms-section">
+          <h3>9. Limitation of Liability</h3>
+          <p>In no event shall Aetheris, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the website.</p>
+        </div>
+
+        <div class="terms-section">
+          <h3>10. Governing Law</h3>
+          <p>These Terms shall be interpreted and governed by the laws of the United States, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
+        </div>
+
+        <div class="terms-section">
+          <h3>11. Changes to Terms</h3>
+          <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.</p>
+        </div>
+
+        <div class="terms-section">
+          <h3>12. Contact Information</h3>
+          <p>If you have any questions about these Terms of Service, please contact us at:</p>
+          <p>Email: <a href="mailto:mmvyash.143@gmail.com" style="color: var(--color-primary); text-decoration: none;">mmvyash.143@gmail.com</a><br>
+          Phone: <a href="tel:+917989552340" style="color: var(--color-primary); text-decoration: none;">+91 7989552340</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

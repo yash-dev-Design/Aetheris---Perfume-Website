@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Returns & Exchanges - Aetheris</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --color-primary: #0f766e;
+      --color-accent: #d4af37;
+      --color-bg: #f8fafc;
+      --color-card: #ffffff;
+      --color-text: #0f172a;
+      --space-1: .25rem;
+      --space-2: .5rem;
+      --space-3: .75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --radius: 16px;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, .06);
+      --shadow: 0 6px 24px rgba(0, 0, 0, .08);
+      --shadow-lg: 0 16px 40px rgba(0, 0, 0, .12);
+      --ring: 0 0 0 3px rgba(15, 118, 110, .2);
+      --container: 1200px;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html, body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      padding-top: 80px;
+      font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin-inline: auto;
+      padding-inline: var(--space-4);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: var(--color-card);
+      border-bottom: 1px solid rgba(15, 23, 42, .08);
+      box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-block: var(--space-4);
+      gap: var(--space-4);
+      min-height: 80px;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: .2px;
+      text-decoration: none;
+      color: var(--color-text);
+    }
+
+    .nav {
+      display: flex;
+      gap: var(--space-6);
+      align-items: center;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: rgba(15, 23, 42, .85);
+      font-weight: 500;
+    }
+
+    .nav a:hover {
+      color: var(--color-primary)
+    }
+
+    .main-content {
+      padding-block: var(--space-12);
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: var(--space-10);
+    }
+
+    .page-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 0 0 var(--space-3);
+    }
+
+    .page-subtitle {
+      color: rgba(15, 23, 42, .72);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8);
+      max-width: 1000px;
+      margin-inline: auto;
+    }
+
+    .content-card {
+      background: var(--color-card);
+      border: 1px solid rgba(15, 23, 42, .08);
+      border-radius: var(--radius);
+      padding: var(--space-6);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .content-card h3 {
+      color: var(--color-primary);
+      margin: 0 0 var(--space-4);
+      font-size: 1.25rem;
+    }
+
+    .content-card ul {
+      margin: 0;
+      padding-left: var(--space-5);
+    }
+
+    .content-card li {
+      margin-bottom: var(--space-2);
+      color: rgba(15, 23, 42, .75);
+    }
+
+    .highlight-box {
+      background: #f0f9ff;
+      border: 1px solid #0ea5e9;
+      border-radius: var(--radius);
+      padding: var(--space-5);
+      margin: var(--space-6) 0;
+      text-align: center;
+    }
+
+    .highlight-box h4 {
+      color: #0369a1;
+      margin: 0 0 var(--space-2);
+    }
+
+    .highlight-box p {
+      margin: 0;
+      color: #0c4a6e;
+    }
+
+    @media (max-width: 780px) {
+      .nav {
+        display: none;
+      }
+      
+      .container {
+        padding-inline: var(--space-3);
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Aetheris</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title">Returns & Exchanges</h1>
+        <p class="page-subtitle">We want you to love your fragrance. If you're not completely satisfied, we're here to help.</p>
+      </div>
+
+      <div class="highlight-box">
+        <h4>30-Day Return Policy</h4>
+        <p>We offer a full 30-day return window for unopened products. Your satisfaction is our priority!</p>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Return Policy</h3>
+          <ul>
+            <li>30-day return window from purchase date</li>
+            <li>Products must be unopened and in original packaging</li>
+            <li>Original receipt or order confirmation required</li>
+            <li>Free return shipping for defective items</li>
+            <li>Refunds processed within 5-7 business days</li>
+            <li>Refund issued to original payment method</li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h3>Exchange Policy</h3>
+          <ul>
+            <li>Free exchanges for different fragrances</li>
+            <li>Size exchanges available (subject to availability)</li>
+            <li>Exchange requests within 14 days of delivery</li>
+            <li>Original packaging must be intact</li>
+            <li>Price difference applies for upgrades</li>
+            <li>Exchanges shipped within 2-3 business days</li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h3>How to Return</h3>
+          <ol>
+            <li>Contact our customer service team</li>
+            <li>Provide your order number and reason for return</li>
+            <li>Receive return authorization and shipping label</li>
+            <li>Package items securely in original packaging</li>
+            <li>Ship using provided return label</li>
+            <li>Track your return status online</li>
+          </ol>
+        </div>
+
+        <div class="content-card">
+          <h3>Non-Returnable Items</h3>
+          <ul>
+            <li>Opened or used products</li>
+            <li>Items damaged by customer</li>
+            <li>Products purchased more than 30 days ago</li>
+            <li>Custom or personalized items</li>
+            <li>Gift cards and digital products</li>
+            <li>Items without original packaging</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h4>Need Help?</h4>
+        <p>Contact our customer service team at <a href="mailto:mmvyash.143@gmail.com" style="color: #0369a1; text-decoration: none;">mmvyash.143@gmail.com</a> or call <a href="tel:+917989552340" style="color: #0369a1; text-decoration: none;">+91 7989552340</a></p>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
